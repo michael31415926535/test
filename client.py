@@ -6,7 +6,7 @@ PORT = 5005
 file = "C:/Users/HyperNova/AppData/Local/EventViewer.txt"
 connectionTries = 0
 socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-while connectionTries < 10:
+while connectionTries < 5:
     try:
         socket1.connect((HOST, PORT))
     except:
