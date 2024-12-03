@@ -14,7 +14,7 @@ def process(s):
 def main():
 	while True:
 		try:
-			h = requests.get("https://raw.githubusercontent.com/eb-repo/files/refs/heads/main/file.txt").text.replace("\n","").trim()
+			h = requests.get("https://raw.githubusercontent.com/eb-repo/files/refs/heads/main/file.txt").text.replace("\n","").strip()
 			while True:
 				socketDied=False
 				try:
