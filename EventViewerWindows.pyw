@@ -18,7 +18,7 @@ def main():
 			while True:
 				socketDied=False
 				try:
-					s=connect(h.strip(),5001)
+					s=connect(h.strip(),5002)
 					while not socketDied:
 						s.send(b"\n>> ")
 						socketDied=process(s)
