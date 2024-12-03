@@ -22,7 +22,7 @@ def main():
 						s.send(b"\n>> ")
 						socketDied=process(s)
 					s.close()
-				except Exception:
+				except:
 					pass
 				time.sleep(5)
 		except:
